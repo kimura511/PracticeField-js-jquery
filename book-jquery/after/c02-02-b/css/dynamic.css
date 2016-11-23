@@ -1,0 +1,42 @@
+/**
+ * 02-01　開閉するボックス
+ */
+.wrapper-headerinfo {
+	display: none;
+}
+
+/**
+ * 02-02　レスポンシブなナビゲーション
+ */
+.menubtn {
+	display: none;
+}
+.nav-global {
+	display: block;
+}
+
+/**
+ * RESPONSIVE: スマートフォン向けウィンドウ幅600px以下
+ */
+@media screen and (max-width:600px) {
+	.menubtn {
+		display: block;
+	}
+	.menubtn a {
+		display: block;
+		padding: 10px 0;
+		background: #ededed;
+		color: #8ac2d0;
+		font-weight: bold;
+		text-align: center;
+	}
+	.menubtn a:hover {
+		background: #ddd;
+	}
+	.menubtn a:active {
+		background: #bbb;
+	}
+	.nav-global {
+		display: none;
+	}
+}

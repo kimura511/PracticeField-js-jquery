@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>transform</title>
+<style>
+.container {
+	margin: 50px auto 0 auto;
+	width:360px;
+	outline: 1px solid red;
+}
+.container p {
+	text-align: center;
+}
+#translatex {
+	-webkit-transform: translate(100px, 0);
+	transform: translate(100px, 0);
+}
+#translatey {
+	-webkit-transform: translate(0, -30px);
+	transform: translate(0, -30px);
+}
+#rotate {
+	-webkit-transform: rotate(-15deg);
+	transform: rotate(-15deg);
+}
+#scale {
+	-webkit-transform: scale(0.5, 0.5);
+	transform: scale(0.5, 0.5);
+}
+#skew {
+	-webkit-transform: skew(15deg, 10deg);
+	transform: skew(15deg, 10deg);
+}
+</style>
+</head>
+<body>
+<div class="container">
+	<div><img src="logo.png"></div>
+	<p>トランスフォームなし</p>
+</div>
+<div class="container">
+	<div id="translatex"><img src="logo.png"></div>
+	<p>x軸方向に移動 <code>transform:translate(100px, 0)</code></p>
+</div>
+<div class="container">
+	<div id="translatey"><img src="logo.png"></div>
+	<p>y軸方向に移動 <code>transform:translate(0, -30px)</code></p>
+</div>
+<div class="container">
+	<div id="rotate"><img src="logo.png"></div>
+	<p>回転 <code>transform:rotate(-15deg)</code></p>
+</div>
+<div class="container">
+	<div id="scale"><img src="logo.png"></div>
+	<p>拡大縮小 <code>transform:scale(0.5, 0.5)</code></p>
+</div>
+<div class="container">
+	<div id="skew"><img src="logo.png"></div>
+	<p>ゆがみ <code>skew(15deg, 10deg)</code></p>
+</div>
+</body>
+</html>

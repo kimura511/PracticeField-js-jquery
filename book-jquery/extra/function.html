@@ -1,0 +1,73 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>関数（function） | JavaScript Note</title>
+<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+<script>
+$(function(){//いつも書くこれも実はイベントハンドラで、即時関数
+
+	//名前がついた通常の関数定義
+	function nameFunction(){
+		//関数が呼び出されると、{}内に書かれた処理を実行する
+		alert('nameFunction()が呼び出されました。');
+	}
+	$('#name').on('click', function(){
+		//名前がついた関数の呼び出し
+		nameFunction();
+	});
+	
+	
+	//無名関数とイベントハンドラ
+	$('#handler').on('click', function(){
+		alert('イベントハンドラが実行されました。');
+	});
+	
+	
+	//イベントハンドラに名前付き関数を使用する
+	function eventHandler(){
+		alert('イベントハンドラで名前付き関数が呼び出されました。');
+	}
+	$('#nameHandler').on('click', eventHandler);
+	
+	
+	//値を返す関数
+	function returnFunction(){
+		return 15 + 8;
+	}
+	$('#return').on('click', function(){
+		//変数answerに、returnFunction()の処理結果が代入される
+		var answer = returnFunction();
+		$('#answer').text(answer);
+	});
+	
+	
+	//パラメータ付き関数
+	function parameterFunction(name){ //nameがパラメータ
+		alert(name + 'さん、こんにちは');
+	}
+	$('#parameter').on('click', function(){
+		var value = $('#textfield').val();
+		parameterFunction(value);
+	});
+	
+	//関数は呼び出しより前で定義しても、後ろで定義してもよい
+	$('#callme').on('click', function(){
+		callMe();
+	});
+	function callMe(){
+		alert('callMeが呼び出されました。');
+	}
+});
+</script>
+</head>
+<body>
+<p>HTMLソースを見ながら動作を確認してみてください。</p>
+<p><button id="name">nameFunction()関数を呼び出す</button></p>
+<p><button id="handler">clickイベント（即時関数）</button></p>
+<p><button id="nameHandler">clickイベント（名前付き関数）</button></p>
+<p><button id="return">クリックして計算 15 + 8 =</button> <span id="answer"></span></p>
+<p><input id="textfield" type="text"><button id="parameter">名前を入力してからクリック</button></p>
+<p><button id="callme">呼び出しよりも後ろで定義した関数を呼び出す</button></p>
+</body>
+</html>

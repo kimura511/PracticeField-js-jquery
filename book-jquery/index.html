@@ -1,0 +1,580 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>index | 作りながら学ぶjQueryデザインの教科書　ダウンロードデータ</title>
+<style>
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, article, aside, footer, header, hgroup, menu, nav, section {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+	color: #000;
+}
+h1, h2, h3, h4, h5, h6 {
+	font-weight: bold;
+}
+a {
+	text-decoration: none;
+}
+ul {
+	list-style: none;
+}
+.clear {
+	overflow: hidden;
+	zoom: 1;
+}
+body {
+	background: #fff;
+	font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+}
+a {
+	color: #666;
+}
+a:hover {
+	color: #75b4c4;
+}
+.wrapper-header {
+
+}
+.header h1 {
+	margin: 30px auto 60px auto;
+	width: 499px;
+	height: 436px;
+	text-indent: -10000px;
+	background: url(index-cover.png) no-repeat;
+}
+.header h1 > a {
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+.wrapper-category {
+	border-top: solid 5px #75b4c4;
+	background: #8ac2d0;
+}
+.category {
+	margin: 0 auto;
+	width: 95%;
+	max-width: 960px;
+}
+.category > div {
+	padding: 30px 0 10px 0;
+	text-align: right;
+	font-size: 2em;
+	line-height: 1em;
+	color: #fff;
+}
+.wrapper {
+	margin: 0 auto 0 auto;
+	width: 95%;
+	max-width: 960px;
+}
+h2 {
+	margin: 2em 0 0;
+	font-size: 120%;
+}
+.before-after {
+	margin-top: 0.5em;
+	border-collapse: collapse;
+	width: 100%;
+}
+.before-after th,
+.before-after td {
+	padding: 4px 1.666667% 4px 1.666667%;
+	border-top: 1px solid #ddd;
+	border-bottom: 1px solid #ddd;
+}
+.before-after th {
+	border-right: 1px solid #ddd;
+	text-align: left;
+	font-weight: normal;
+	width: 20%;
+	color: white;
+}
+.before-after tr:nth-child(odd) > th {
+	background: #8ac2d0;
+}
+.before-after tr:nth-child(even) > th {
+	background: #deb25e;
+}
+.before-after td {
+	padding-left: 1em;
+	width: 80%;
+}
+.before-after tr:nth-child(odd) td a {
+	color: #75b4c4;
+}
+.before-after tr:nth-child(even) td a {
+	color: #deb25e;
+}
+.before-after tr td a:hover {
+	text-decoration: underline;
+}
+h3 {
+	margin: 1em 0 0 1.666667%;
+	font-size: 100%;
+	font-weight: normal;
+	color: #555;
+	cursor: pointer;
+	transition: all 0.2s linear;
+}
+h3.expanded {
+	color: #75b4c4;
+}
+h3.collapsed {
+	color: #555;
+}
+h3::before {
+	position: relative;
+	display: inline-block;
+	content: "";
+	width: 1px;
+	height: 1px;
+	border: 4px solid transparent;
+}
+h3.expanded::before {
+	border-top: 6px solid #75b4c4;
+	margin-right: 2px;
+	top: 2px;
+	left: -3px;
+}
+h3.collapsed::before {
+	border-left: 6px solid #ccc;
+	top: -1px;
+}
+h3.collapsed:hover::before {
+	border-left-color: #75b4c4;
+}
+h3:hover {
+	color: #75b4c4;
+}
+.sno {
+	color: inherit;
+}
+ul.listview {
+	margin: 0 0 0 2.708333%;
+}
+ul li {
+	line-height: 180%;
+}
+ul.collapsed {
+	display: none;
+}
+ul.listview li > a {
+	transition: all 0.2s linear;
+}
+ul.listview li > a::after {
+	content:" »";
+	color: transparent;
+	transition: all 0.2s linear;
+}
+ul.listview li > a:hover {
+	color: #deb25e;
+}
+ul.listview li > a:hover::after {
+	content:" »";
+	color: inherit;
+}
+.wrapper-footer {
+	background: #000;
+}
+.footer {
+	margin: 40px auto 0 auto;
+	padding: 40px 0;
+	width: 95%;
+	max-width: 960px;
+}
+.note {
+	margin: 0 auto;
+	font-size: 80%;
+	color: #ddd;
+}
+.note li {
+	color: inherit;
+}
+@media only screen and (max-width: 809px) {
+	.before-after th {
+		width: 30%;
+	}
+	.before-after td {
+		width: 70%;
+	}
+}
+@media only screen and (max-width: 563px) {
+	.header h1 {
+		width: 399px;
+		height: 349px;
+		background-size: 100% 100%;
+	}
+}
+@media only screen and (max-width: 542px) {
+	h3 {
+		text-indent: -10px;
+		padding-left: 10px;
+	}
+	ul.listview {
+		margin: 0 0 0 3.3321033%;
+	}
+}
+@media only screen and (max-width: 505px) {
+	.before-after th {
+		width: 46%;
+	}
+	.before-after td {
+		width: 54%;
+	}
+}
+@media only screen and (max-width: 466px) {
+	.header h1 {
+		width: 319px;
+		height: 279px;
+		background-position: 8px 0;
+		background-size: 100% 100%;
+	}
+	.category > div {
+		text-align: center;
+		font-size: 1.4em;
+	}
+}
+@media only screen and (max-width: 426px) {
+	.header h1 {
+		width: 287px;
+		height: 251px;
+		background-size: 100% 100%;
+	}
+}
+</style>
+<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+<script>
+$(function(){
+
+$('h3').on('click', function(){
+	$(this)
+	.toggleClass('collapsed')
+	.toggleClass('expanded')
+	.next().slideToggle('fast');
+});
+
+});
+</script>
+</head>
+<body>
+<div class="wrapper-header">
+	<div class="header">
+		<h1><a href="http://www.solidpanda.com/book/" title="「作りながら学ぶjQueryデザインの教科書」サポートサイトへ">作りながら学ぶjQueryデザインの教科書</a></h1>
+	</div><!-- /.header --> 
+</div><!-- /.wrapper-header -->
+<div class="wrapper-category">
+	<div class="category">
+		<div>SAMPLES</div>
+	</div><!-- /.category -->
+</div><!-- /.wrapper-category -->
+
+<div class="wrapper">
+	<div>
+		<h2>第1章　jQueryの基本</h2>
+		<table class="before-after">
+			<tr>
+				<th>作業用のファイル</th><td><a href="before/c01">before/c01</a></td>
+			</tr>
+			<tr>
+				<th>第1章の完成例</th><td><a href="after/c01-11-c">after/c01-11-c/</a></td>
+			</tr>
+		</table>
+		<h3 class="collapsed"><span class="sno">01-06</span> jQueryトレーニング(その1)~ jQueryを読み込む~</h3>
+		<ul class="listview collapsed">
+			<li><a href="after/c01-06-a">Step1 jQueryライブラリを読み込む</a></li>
+		</ul>
+
+		<h3 class="collapsed">01-07 jQueryトレーニング(その2)~スクリプトを試しに書いてみる~</h3>
+		<ul class="listview collapsed">
+			<li><a href="after/c01-07-a">Step1 要素セレクタを使用して&lt;p&gt;を取得する</a></li>
+			<li><a href="after/c01-07-b">Step2 DOMの生成を待つ</a></li>
+			<li><a href="after/c01-07-c">Step3 イベントハンドラを設定する</a></li>
+			<li><a href="after/c01-07-d">Step4 クリックした要素にだけ処理を実行する</a></li>
+		</ul>
+
+		<h3 class="collapsed">01-08 jQueryトレーニング(その3)~要素を取得する~</h3>
+		<ul class="listview collapsed">
+			<li><a href="after/c01-08-a">Step1 要素セレクタで要素を取得する</a></li>
+			<li><a href="after/c01-08-b">Step2 idセレクタで要素を取得する</a></li>
+			<li><a href="after/c01-08-c">Step3 クラスセレクタで要素を取得する</a></li>
+			<li><a href="after/c01-08-d">Step4 子孫セレクタで要素を取得する</a></li>
+			<li><a href="after/c01-08-e">Step5 :nth-child(n)セレクタで要素を取得する</a></li>
+			<li><a href="after/c01-08-f">Step6 属性セレクタで要素を取得する</a></li>
+			<li><a href="after/c01-08-g">Step7 複数のセレクタを使用する</a></li>
+		</ul>
+
+		<h3 class="collapsed">01-09 jQueryトレーニング(その4)~イベントハンドラを設定する~</h3>
+		<ul class="listview collapsed">
+			<li><a href="after/c01-09-a">Step1 コメントを記述する</a></li>
+			<li><a href="after/c01-09-b">Step2 マウスオーバーしたらアウトラインを付ける</a></li>
+			<li><a href="after/c01-09-c">Step3 マウスアウトしたらアウトラインを外す</a></li>
+			<li><a href="after/c01-09-d">Step4 テキストフィールドにフォーカスが当たったら背景色を変更する</a></li>
+		</ul>
+
+		<h3 class="collapsed">01-10 jQueryトレーニング(その5)~トラバースで要素を取得する~</h3>
+		<ul class="listview collapsed">
+			<li><a href="after/c01-10-a">Step1 テーブルのセルを取得する</a></li>
+			<li><a href="after/c01-10-b">Step2 条件にマッチした直近の祖先要素を取得する</a></li>
+			<li><a href="after/c01-10-c">Step3 変数を使う</a></li>
+			<li><a href="after/c01-10-d">Step4 親要素をすべて取得する・条件に合うものだけ選別する</a></li>
+			<li><a href="after/c01-10-e">Step5 兄弟要素を取得する</a></li>
+		</ul>
+
+		<h3 class="collapsed">01-11 jQueryトレーニング(その6)~要素を操作する~</h3>
+		<ul class="listview collapsed">
+			<li><a href="after/c01-11-a">Step1 クリックしたリスト項目の内容を書き替える</a></li>
+			<li><a href="after/c01-11-b">Step2 クリックした回数を保持する</a></li>
+			<li><a href="after/c01-11-c">Step3 要素を追加する</a></li>
+		</ul>
+	</div>
+
+	<div>
+		<h2>第2章　ページのデザインに役立つUIの作成</h2>
+		<table class="before-after">
+			<tr>
+				<th>作業用のファイル</th><td><a href="before/c02">before/c02</a></td>
+			</tr>
+			<tr>
+				<th>第2章の完成例</th><td><a href="after/c02-04-d">after/c02-04-d</a></td>
+			</tr>
+		</table>
+		<h3 class="collapsed">02-01 開閉するボックス</h3>
+		<ul class="listview collapsed">
+			<li><a href="after/c02-01-a">Step1 基本的な動作を作成する</a></li>
+			<li><a href="after/c02-01-b">Step2 ボックスの開閉にアニメーションを付ける</a></li>
+			<li><a href="after/c02-01-c">Step3 アニメーションの演出を変える</a></li>
+		</ul>
+
+		<h3 class="collapsed">02-02 レスポンシブなナビゲーション</h3>
+		<ul class="listview collapsed">
+			<li><a href="after/c02-02-a">Step1 狭いウィンドウ幅のときにだけ表示されるリンクを作成する</a></li>
+			<li><a href="after/c02-02-b">Step2 動作の不具合を修正する</a></li>
+		</ul>
+
+		<h3 class="collapsed">02-03 コンテンツを切り換えるタブ</h3>
+		<ul class="listview collapsed">
+			<li><a href="after/c02-03-a">Step1 タブボタンの動作を実装する</a></li>
+			<li><a href="after/c02-03-b">Step2 &lt;a&gt;のデフォルトの動作を抑制する</a></li>
+			<li><a href="after/c02-03-c">Step3 デリゲートを使用する</a></li>
+			<li><a href="after/c02-03-d">Step4 表示するコンテンツを切り換える</a></li>
+		</ul>
+
+		<h3 class="collapsed">02-04 簡易的なイメージギャラリー</h3>
+		<ul class="listview collapsed">
+			<li><a href="after/c02-04-a">Step1 サムネイルの動作を実装する</a></li>
+			<li><a href="after/c02-04-b">Step2 メイン画像を切り換える</a></li>
+			<li><a href="after/c02-04-c">Step3 メイン画像をプリロードする(1) ~関数を定義する~</a></li>
+			<li><a href="after/c02-04-d">Step4 メイン画像をプリロードする(2) ~関数を呼び出す~</a></li>
+			<li><a href="extra/function.html">JavaScript Note 関数(function)の基礎</a></li>
+		</ul>
+	</div>
+
+	<div>
+		<h2>第3章　動きのあるコンテンツを作成する</h2>
+		<table class="before-after">
+			<tr>
+				<th>作業用のファイル</th><td><a href="before/c03">before/c03</a></td>
+			</tr>
+			<tr>
+				<th>第3章の完成例</th><td><a href="after/c03-07-c">after/c03-07-c</a></td>
+			</tr>
+		</table>
+		<h3 class="collapsed">03-01 アコーディオン</h3>
+		<ul class="listview collapsed">
+			<li><a href="after/c03-01-a">Step1 リンクをクリックしたらコンテンツが開く動作を作成する</a></li>
+			<li><a href="after/c03-01-b">Step2 アコーディオンの動作を実装する</a></li>
+			<li><a href="extra/ex03-01">カスタマイズのポイント コンテンツには画像も使えて、複雑なレイアウトにもできる</a></li>
+		</ul>
+
+		<h3 class="collapsed">03-02 ドロップダウンメニュー</h3>
+		<ul class="listview collapsed">
+			<li><a href="after/c03-02-a">Step1 ドロップダウンメニューの最低限の機能とデザインを作成する</a></li>
+			<li><a href="after/c03-02-b">Step2 ボタン以外の場所をクリックしたときにもメニューを閉じる(1)</a></li>
+			<li><a href="after/c03-02-c">Step3 ボタン以外の場所がクリックされたときにもメニューを閉じる(2)</a></li>
+			<li><a href="extra/propagation.html">JavaScript Note イベントプロパゲーション </a></li>
+			<li><a href="after/c03-02-d">Step4 より汎用的なドロップダウンメニューにする</a></li>
+			<li><a href="extra/ex03-02">カスタマイズのポイント 複数のドロップダウンメニューを組み込むには</a></li>
+		</ul>
+
+		<h3 class="collapsed">03-03 CSSを操作するアニメーション</h3>
+		<ul class="listview collapsed">
+			<li><a href="after/c03-03-a">Step1 CSSプロパティを直接操作する</a></li>
+			<li><a href="after/c03-03-b">Step2 addClass()/removeClass()を使用する</a></li>
+		</ul>
+
+		<h3 class="collapsed">03-04 連続アニメーション</h3>
+		<ul class="listview collapsed">
+			<li><a href="after/c03-04-a">Step1 animate()を使用する</a></li>
+			<li><a href="after/c03-04-b">Step2 animate()で連続的なアニメーションを作る</a></li>
+		</ul>
+
+		<h3 class="collapsed">03-05 高度なアニメーションテクニック</h3>
+		<ul class="listview collapsed">
+			<li><a href="after/c03-05-a">Step1 mouseenterとmouseleaveイベントの処理を1つにまとめる</a></li>
+			<li><a href="after/c03-05-b">Step2 animate()の2番目のパラメータをオブジェクトにする</a></li>
+			<li><a href="after/c03-05-c">Step3 不透明度の変化に合わせて画像を回転させる</a></li>
+			<li><a href="extra/ex-transform">CSS Note 要素のコンテンツを変形するtransform</a></li>
+			<li><a href="extra/ex03-05">カスタマイズのポイント スマートフォンでアニメーションをしないようにするには</a></li>
+		</ul>
+
+		<h3 class="collapsed">03-06 スライドショー</h3>
+		<ul class="listview collapsed">
+			<li><a href="after/c03-06-a">Step1 ボタンがクリックされた関数を呼び出す</a></li>
+			<li><a href="after/c03-06-b">Step2 画像を切り換える</a></li>
+			<li><a href="after/c03-06-c">Step3 一定時間で次の写真を表示する</a></li>
+			<li><a href="after/c03-06-d">Step4 ほかのスクリプトへの影響を排除する</a></li>
+		</ul>
+
+		<h3 class="collapsed">03-07 Ajaxの基礎</h3>
+		<ul class="listview collapsed">
+			<li><a href="after/c03-07-a">Step1 データを取得する</a></li>
+			<li><a href="after/c03-07-b">Step2 読み込んだデータを表示する</a></li>
+			<li><a href="after/c03-07-c">Step3 毎回違うデータを読み込む</a></li>
+		</ul>
+	</div>
+
+	<div>
+		<h2>第4章　Webページ全体を制御する</h2>
+		<table class="before-after">
+			<tr>
+				<th>作業用のファイル</th><td><a href="before/c04">before/c04</a></td>
+			</tr>
+			<tr>
+				<th>第4章の完成例</th><td><a href="after/c04-06-b">after/c04-06-b</a></td>
+			</tr>
+		</table>
+		<h3 class="collapsed">04-01 モーダルウィンドウ</h3>
+		<ul class="listview collapsed">
+			<li><a href="after/c04-01-a">Step1 ウィンドウを開閉する</a></li>
+			<li><a href="after/c04-01-b">Step2 モーダルウィンドウをブラウザウィンドウの中央に表示する</a></li>
+			<li><a href="after/c04-01-c">Step3 シェードを付ける</a></li>
+			<li><a href="after/c04-01-d">Step4 closeボタンを追加する</a></li>
+		</ul>
+
+		<h3 class="collapsed">04-02 ウィンドウ上端で固定するグローバルナビゲーション</h3>
+		<ul class="listview collapsed">
+			<li><a href="after/c04-02-a">Step1 スクロール位置を取得する</a></li>
+			<li><a href="after/c04-02-b">Step2 カスタムイベントを発生させる</a></li>
+			<li><a href="after/c04-02-c">Step3 グローバルナビゲーションを固定する</a></li>
+			<li><a href="after/c04-02-d">Step4 ナビゲーションが固定されたときの動作を改善する</a></li>
+		</ul>
+
+		<h3 class="collapsed">04-03 指定位置で固定するサイドバー</h3>
+		<ul class="listview collapsed">
+			<li><a href="after/c04-03-a">Step1 サイドバーに適用してみる</a></li>
+			<li><a href="after/c04-03-b">Step2 固定位置をずらす</a></li>
+			<li><a href="after/c04-03-c">Step3 スマートフォンのときにはサイドバーの固定を止める</a></li>
+		</ul>
+
+		<h3 class="collapsed">04-04 スクロールするページ内リンク</h3>
+		<ul class="listview collapsed">
+			<li><a href="after/c04-04-a">Step1 ページ内のリンク先までスクロールする</a></li>
+			<li><a href="after/c04-04-b">Step2 スクロールする位置を指定する</a></li>
+		</ul>
+
+		<h3 class="collapsed">04-05 スクロールしてページトップへ戻るリンク</h3>
+		<ul class="listview collapsed">
+			<li><a href="after/c04-05-a">Step1 ページトップへ移動するリンクを作成する</a></li>
+		</ul>
+
+		<h3 class="collapsed">04-06 スクロール位置に合わせたリンクのハイライト</h3>
+		<ul class="listview collapsed">
+			<li><a href="after/c04-06-a">Step1 基本機能を実装する</a></li>
+			<li><a href="after/c04-06-b">Step2 ブラウザの動作の違いを吸収する</a></li>
+		</ul>
+	</div>
+
+	<div>
+		<h2>第5章　データからページを生成する</h2>
+		<table class="before-after">
+			<tr>
+				<th>作業用のファイル</th><td><a href="before/c05">before/c05</a></td>
+			</tr>
+			<tr>
+				<th>第5章の完成例</th><td><a href="after/c05-04-c">after/c05-04-c</a></td>
+			</tr>
+		</table>
+		<h3 class="collapsed">05-01 JSONデータの取得</h3>
+		<ul class="listview collapsed">
+			<li><a href="after/c05-01-a">Step1 データを読み込む</a></li>
+			<li><a href="after/c05-01-b">Step2 エラーを表示する</a></li>
+		</ul>
+
+		<h3 class="collapsed">05-02 データからテーブルを生成</h3>
+		<ul class="listview collapsed">
+			<li><a href="after/c05-02-a">Step1 基本的なテーブルを生成して表示する</a></li>
+			<li><a href="after/c05-02-b">Step2 モバイル端末向けのレイアウトを作成する</a></li>
+		</ul>
+
+		<h3 class="collapsed">05-03 データによるアイコン画像の切り換え</h3>
+		<ul class="listview collapsed">
+			<li><a href="after/c05-03-a">Step1 データに応じて画像を切り換える</a></li>
+		</ul>
+
+		<h3 class="collapsed">05-04 データのフィルタ処理</h3>
+		<ul class="listview collapsed">
+			<li><a href="after/c05-04-a">Step1 フィルタ用のボタンを作成する</a></li>
+			<li><a href="after/c05-04-b">Step2 テーブルを消去する機能を追加する</a></li>
+			<li><a href="after/c05-04-c">Step3 データをフィルタしてテーブルを再表示する</a></li>
+		</ul>
+	</div>
+
+	<div>
+		<h2>第6章　カルーセルを作成する</h2>
+		<table class="before-after">
+			<tr>
+				<th>作業用のファイル</th><td><a href="before/c06">before/c06</a></td>
+			</tr>
+			<tr>
+				<th>第6章の完成例</th><td><a href="after/c06-05-a">after/c06-05-a</a></td>
+			</tr>
+		</table>
+		<h3 class="collapsed">06-01 カルーセルを作成する</h3>
+		<ul class="listview collapsed">
+			<li><a href="after/c06-01-a">Step1 サムネイルを横一列に並べる</a></li>
+			<li><a href="after/c06-01-b">Step2 ボタンを作成して、サムネイルをスライドさせる</a></li>
+			<li><a href="after/c06-01-c">Step3 サムネイルを繰り返し表示する</a></li>
+			<li><a href="extra/ex06-01">カスタマイズのポイント サムネイルのサイズを変更する</a></li>
+		</ul>
+
+		<h3 class="collapsed">06-02 大きな画像を表示する</h3>
+		<ul class="listview collapsed">
+			<li><a href="after/c06-02-a">Step1 画像を表示する</a></li>
+			<li><a href="after/c06-02-b">Step2 フェードインを付ける</a></li>
+			<li><a href="after/c06-02-c">Step3 カルーセルのサムネイルをハイライトする</a></li>
+			<li><a href="after/c06-02-d">Step4 キャプションを表示する</a></li>
+		</ul>
+
+		<h3 class="collapsed">06-03 カルーセルのプラグインを作成する</h3>
+		<ul class="listview collapsed">
+			<li><a href="after/c06-03-a">Step1 カルーセルをプラグインにする</a></li>
+		</ul>
+
+		<h3 class="collapsed">06-04 プリロードのプラグインを作成する</h3>
+		<ul class="listview collapsed">
+			<li><a href="after/c06-04-a">Step1 プリロードのプラグインを作成する</a></li>
+		</ul>
+
+		<h3 class="collapsed">06-05 プラグインを別ファイルにする</h3>
+		<ul class="listview collapsed">
+			<li><a href="after/c06-05-a">Step1 プラグイン専用の.jsファイルを作成する</a></li>
+		</ul>
+	</div>
+</div>
+
+<div class="wrapper-footer">
+	<div class="footer">
+		<ul class="note">
+			<li>※本サイトは書籍「作りながら学ぶjQueryデザインの教科書」実習用サンプルです。</li>
+			<li>※本書のサンプルはインターネットに接続できる環境でご覧ください。</li>
+		</ul>
+	</div><!-- /.footer -->
+</div><!-- /.wrapper-footer -->
+</body>
+</html>

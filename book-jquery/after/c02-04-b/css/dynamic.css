@@ -1,0 +1,129 @@
+/**
+ * 02-01　開閉するボックス
+ */
+.wrapper-headerinfo {
+	display: none;
+}
+
+/**
+ * 02-02　レスポンシブなナビゲーション
+ */
+.menubtn {
+	display: none;
+}
+.nav-global {
+	display: block;
+}
+
+/**
+ * RESPONSIVE: スマートフォン向けウィンドウ幅600px以下
+ */
+@media screen and (max-width:600px) {
+	.menubtn {
+		display: block;
+	}
+	.menubtn a {
+		display: block;
+		padding: 10px 0;
+		background: #ededed;
+		color: #8ac2d0;
+		font-weight: bold;
+		text-align: center;
+	}
+	.menubtn a:hover {
+		background: #ddd;
+	}
+	.menubtn a:active {
+		background: #bbb;
+	}
+	.nav-global {
+		display: none;
+	}
+}
+
+/**
+ * 02-03　コンテンツを切り替えるタブ
+ */
+.tab-menu {
+	border-bottom: 6px solid #b9d5dc;
+}
+.tab-menu > li {
+	float: left;
+	margin: 0 3px 0 0;
+}
+.tab-menu > li > a {
+	display: block;
+	padding: 8px 20px 4px 20px;
+	background: #bbb;
+	border-radius: 5px 5px 0 0;
+	color: #fff;
+}
+.tab-menu > li > a:hover {
+	background: #a2a2a2;
+}
+.tab-menu > li > a:active {
+	background: #757575;
+}
+.tab-menu > li.selected > a {
+	background-color: #b9d5dc;
+	color: #fff;
+}
+.tab-contents {
+	padding: 20px 2.2727272%;/* 2.2727272%（20px/880px） */
+	background: #ededed;
+}
+.tab-contents .hidden {
+	display: none;
+}
+
+/**
+ * RESPONSIVE: スマートフォン向けウィンドウ幅600px以下
+ */
+@media screen and (max-width:600px) {
+	.tab-menu > li {
+		margin: 0 2px 0 0;
+	}
+	.tab-menu > li > a {
+		padding: 5px 5px 3px 5px;
+	}
+}
+
+/**
+ * 02-04　簡易的なイメージギャラリー
+ */
+.gallery {
+	width: 510px;
+	margin: 0 auto;
+	padding: 20px;
+	background: #ededed;
+	border-radius: 5px;
+	line-height: 0;
+}
+.mainimage {
+	text-align: center;
+}
+.mainimage > img {
+	max-width: 100%;
+}
+.thumbnails {
+	margin: 10px 0 0 0;
+}
+.thumbnails li {
+	float: left;
+	margin: 0 2px 0 0;
+	border: 2px solid #ededed;
+}
+.thumbnails li.selected {
+	border: 2px solid #8ac2d0;
+}
+
+/**
+ * RESPONSIVE: スマートフォン向けウィンドウ幅600px以下
+ */
+@media screen and (max-width:600px) {
+	.gallery {
+		width: 96%;
+		margin: 30px 0;
+		padding: 20px 2%;
+	}
+}
