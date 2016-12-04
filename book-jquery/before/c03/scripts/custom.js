@@ -107,7 +107,6 @@ $(function(){
           //じゃあどこでセットされてる
           //stepのオプションとして変化している値？
           var rotate = 'rotate(' + (1 - now) * (360 / value) + 'deg)';
-          console.log(rotate);
           $(this)
           .css({
             '-webkit-trasform':rotate,
@@ -124,6 +123,100 @@ $(function(){
       .off('mouseenter')
       .off('mouseleave');
     } catch(err) {
+    }
+  });
+});
+
+$(function(){
+  var intervalId;
+  setTimer();
+  function setTimer(){
+    intervalId = setInterval(autoClick,5000);
+  }
+  function autoClick(){
+    $('.slide').children('a.next').click();
+  }
+  function changeImage($click){
+    // console.log($click);
+    //currentが付いているものを変数として取得
+    var $current = $click.siblings('.container').children('.current');
+    var $new;
+    var findSelector = '';
+    //クリックされたaタグのクラス名を判別する
+    //nextなら、
+    if($click.hasClass('next')){
+      //$currentからみて、次のliタグ
+      $new = $current.next();
+      //findSelecterは繰り返し要素
+      findSelector = ':first-child';
+    } else {
+      //$currentから見て前のliタグ
+      $new = $current.prev();
+      findSelector = ':last-child';
+    }
+    //$newは次の要素
+    //それが単純にあるか、ないか？　が$new.length
+    //そしてなかったら、戻すようのものが、findSelector
+    //nextの場合は頭に持ってくる
+    //prevの場合はお尻に持ってくる
+    //もしも前後に要素がなかったときの処理の追加
+    //取得した要素を調べるには、lengthを使用する
+    //取得できなかったら0になる
+    if($new.length == 0){
+      //最初もしくは最後の要素をnewに追加する
+      $new = $current.siblings(findSelector);
+    }
+    $current.removeClass('current');
+    $new.addClass('current');
+    setTimer();
+  }
+  // ボタンクリックで関数を呼び出す
+  $('.slide')
+  .on('click','>a',function(event){
+    event.preventDefault();
+    event.stopPropagation();
+    //タイマーを一旦クリアにする関数
+    clearInterval(intervalId);
+    changeImage($(this));
+  });
+});
+
+$(function(){
+  $('#fetch').on('click',function(event){
+    event.preventDefault();
+    $this = $(this);
+    //1 #fetchのhref属性を代入
+    var ajaxUrl = $this.attr('href');
+    // c-1
+    //初期値ではajax/article1.json
+    if(ajaxUrl != '#'){
+      //2function(data){}が実行される
+      $.get(ajaxUrl,function(data){
+        //console.dir(data);
+        //1 insertImgに挿入
+        var $insertImg = $('<img>').attr('src',data.img);
+        //2
+        var $insertText = $('<p></p>').text(data.article);
+        //3
+        var $list = $('<li></li>')
+                    .prepend($insertImg)
+                    .append($insertText)
+                    .css({"opacity":0});
+        //4
+        $('#ajax-list').append($list);
+        $list.animate({'opacity':1},400);
+        //リンク先を変更して読み込むデータファイルを変える
+        //c-2　データが準備している数になったら打ち止め
+        if(data.next == "") {
+          $this
+          .attr('href','#')
+          .addClass('disabled')
+        } else {
+          //そうじゃないなら、nextをaタグのhrefに入れてあげましょう
+          $this
+          .attr('href',data.next)
+        }
+      });
     }
   });
 });
